@@ -87,15 +87,17 @@ public class SecurityGuard : MonoBehaviour
 
     private void Rotate()
     {
-        if (rb.velocity.x < 0)
+        if (rb.velocity.x > 0)
         {
             sprite.flipX = true;
             transform.GetChild(0).transform.localPosition = new Vector2(0.13f, transform.GetChild(0).transform.localPosition.y);
+            transform.GetChild(0).transform.eulerAngles = new Vector3(0,0,90);
         }
-        else if (rb.velocity.x > 0)
+        else if (rb.velocity.x < 0)
         {
             sprite.flipX = false;
-            transform.GetChild(0).transform.localPosition = new Vector2(-0.38f, transform.GetChild(0).transform.localPosition.y);
+            transform.GetChild(0).transform.localPosition = new Vector2(-0.13f, transform.GetChild(0).transform.localPosition.y);
+            transform.GetChild(0).transform.eulerAngles = new Vector3(0, 0, 270);
         }
         //Движение руки
     }
@@ -113,6 +115,6 @@ public class SecurityGuard : MonoBehaviour
         if(sprite.flipX == true)
             handAnim.Play("RightHandRotate");
         else
-            handAnim.Play("LeftHandRotate");
+            handAnim.Play("LeftHandRotate"); 
     }
 }
