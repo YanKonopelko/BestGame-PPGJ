@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4645132edefd4c74968a0c941a98fb89, type: 3}
+  m_Name: Audio Database
+  m_EditorClassIdentifier: 
+  _items:
+  - Clip: {fileID: 8300000, guid: 4d907a52339124a43a9d0b1f58606ef8, type: 3}
+    Key: InGameMusic
+    FolderPath: 
+    Name: 
+    Preload: 1
+    _id: 40ec7111-1a02-48fd-a9ce-8cc78e4d9765
+  - Clip: {fileID: 8300000, guid: acadc23a4f447ca44968a6dce5f5a53c, type: 3}
+    Key: StepsSound
+    FolderPath: 
+    Name: 
+    Preload: 1
+    _id: 2db2f0e0-dec3-4478-93ac-d63362493419
+  - Clip: {fileID: 8300000, guid: fcf8448be0b33b247929bbc21cd7038e, type: 3}
+    Key: InteractSound
+    FolderPath: 
+    Name: 
+    Preload: 1
+    _id: 9005637c-0ca6-4ecf-8597-bfed54bde4a7
+  - Clip: {fileID: 8300000, guid: a3f983691a962f343b6dd6eff91edccc, type: 3}
+    Key: CollectSound
+    FolderPath: 
+    Name: 
+    Preload: 1
+    _id: c2976ad2-b332-464b-bdab-ac5cefbc3623

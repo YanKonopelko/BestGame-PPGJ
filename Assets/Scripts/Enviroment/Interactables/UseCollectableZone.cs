@@ -8,6 +8,7 @@ public class UseCollectableZone : Interactable
 
     public override void Action()
     {
+        //Debug.Log(typeof(collectable.type));
         int i = 0;
         if (GameManager.Instance.Collectacles.TryGetValue(collectable, out i))
         {
