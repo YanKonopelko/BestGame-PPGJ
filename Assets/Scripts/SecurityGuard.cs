@@ -12,9 +12,15 @@ public class SecurityGuard : MonoBehaviour
     private bool isStay = false;
     private float curStayTime = 0;
     private int curPoint = 0;
+
     private bool isGoBack = false;
     [SerializeField] private float movementSpeed = 1;
+
     private SpriteRenderer sprite;
+
+    [SerializeField] private Animation handAnim;
+    [SerializeField] private Animation anim;
+
 
     void Start()
     {
@@ -27,6 +33,7 @@ public class SecurityGuard : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
 
+        handAnim = transform.GetChild(0).GetComponent<Animation>();
     }
 
     void FixedUpdate()
@@ -81,14 +88,32 @@ public class SecurityGuard : MonoBehaviour
     private void Rotate()
     {
         if (rb.velocity.x < 0)
+        {
             sprite.flipX = true;
+            transform.GetChild(0).transform.localPosition = new Vector2(0.13f, transform.GetChild(0).transform.localPosition.y);
+        }
         else if (rb.velocity.x > 0)
+        {
             sprite.flipX = false;
+            transform.GetChild(0).transform.localPosition = new Vector2(-0.38f, transform.GetChild(0).transform.localPosition.y);
+        }
+        //Движение руки
     }
     public void PointReached()
     {
         curStayTime = 0;
         Debug.Log("Reached");
         isStay = true;
+        HandRotate();
+    }
+
+    private void HandRotate()
+    {
+        //Left Rotate
+        //Right Rotate
+        if(sprite.flipX == true)
+            handAnim.Play("RightHandRotate");
+        else
+            handAnim.Play("LeftHandRotate");
     }
 }
