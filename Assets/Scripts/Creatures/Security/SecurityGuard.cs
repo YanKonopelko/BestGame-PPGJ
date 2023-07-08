@@ -102,7 +102,6 @@ public class SecurityGuard : MonoBehaviour
     public void PointReached()
     {
         curStayTime = 0;
-        Debug.Log("Reached");
         isStay = true;
         HandRotate();
     }
