@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = Vector3.zero;
+        rb.velocity = Vector2.zero;
         Move();
         Rotate();
         
@@ -28,12 +28,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
+        
         float moveHorizontal = Input.GetAxis("Horizontal"); 
-        float moveVertical = Input.GetAxis("Vertical"); 
-
+        float moveVertical = Input.GetAxis("Vertical");
         Vector2 movement = new Vector2(moveHorizontal, moveVertical); 
-
-        rb.velocity = movement * movementSpeed * Time.deltaTime; 
+        rb.velocity = movement * movementSpeed * Time.deltaTime;
+        
 
 
     }
