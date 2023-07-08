@@ -5,13 +5,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public static Action OnActionPress;
+    public Action OnActionPress;
     [SerializeField] private KeyCode interactionKeyCode = KeyCode.E;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -21,4 +16,6 @@ public class Player : MonoBehaviour
             OnActionPress?.Invoke();
         }
     }
+
+
 }

@@ -3,13 +3,14 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
     [SerializeField]private GameObject PressECanvas;
-
+    public Player player;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetComponent<Player>())
         {         
+            player = collision.GetComponent<Player>();
             PressECanvas.SetActive(true);
-            Player.OnActionPress += Action;
+            player.OnActionPress += Action;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -17,8 +18,8 @@ public class Interactable : MonoBehaviour
         if (collision.GetComponent<Player>())
         {
             PressECanvas.SetActive(false);
-            Player.OnActionPress -= Action;
-
+            player.OnActionPress -= Action;
+            player = null; 
         }
     }
 
