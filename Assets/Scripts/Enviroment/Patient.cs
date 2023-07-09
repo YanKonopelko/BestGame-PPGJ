@@ -33,6 +33,6 @@ public class Patient : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         GetComponent<SpriteRenderer>().flipX = true;
-        GetComponent<BoxCollider2D>().offset = new Vector2(0.26f, -0.0278267f);
+        GetComponent<BoxCollider2D>().offset = new Vector2(1.3f, -0.005971789f);
     }
 }
