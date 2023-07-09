@@ -3,7 +3,7 @@ using UnityEngine;
 public class UseCollectableZone : Interactable
 {
     [SerializeField] Collectable collectable;
-
+    [SerializeField] Patient patient;
     public override void Action()
     {
         //Debug.Log(typeof(collectable.type));
@@ -14,6 +14,7 @@ public class UseCollectableZone : Interactable
                 GameManager.Instance.Collectacles[collectable] -= 1;
                 transform.GetChild(0).gameObject.SetActive(true);
                 this.enabled = (false);
+                patient.ChangeState();
             }
             
         }

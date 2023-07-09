@@ -5,7 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    [SerializeField] public Dictionary<Collectable, int> Collectacles = new Dictionary<Collectable, int>() { }; 
+
+    [SerializeField] public Dictionary<Collectable, int> Collectacles = new Dictionary<Collectable, int>() { };
+
+    [SerializeField] private GameObject EndGameCanvas;
      void Start()
     {
         Instance = this;
@@ -14,6 +17,8 @@ public class GameManager : MonoBehaviour
     public void Lose()
     {
         Debug.Log("Lose");
+        var a = FindObjectOfType<Player>();
+        a.gameObject.transform.position = new Vector3(6.35f, 0, 0);
     }
     public void AddCollectables(Collectable collectable)
     {
@@ -29,4 +34,10 @@ public class GameManager : MonoBehaviour
         Debug.Log(Collectacles[collectable]);
 
     }
+
+    public void Win()
+    {
+        EndGameCanvas.SetActive(true);
+    }
+
 }
