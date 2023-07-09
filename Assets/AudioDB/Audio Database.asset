@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Audio Database
   m_EditorClassIdentifier: 
   _items:
-  - Clip: {fileID: 8300000, guid: 3fa7122d80d39f544af3826107d4d445, type: 3}
+  - Clip: {fileID: 8300000, guid: 6f14e4efb43c61c4eaea0da98f93abc6, type: 3}
     Key: MainMenuMusic
-    FolderPath: Plugins\Audio\Examples\Sounds\
-    Name: Example music.mp3
+    FolderPath: Audio\
+    Name: "\u0444\u043E\u043D.mp3"
     Preload: 1
     _id: 40ec7111-1a02-48fd-a9ce-8cc78e4d9765
   - Clip: {fileID: 8300000, guid: 25b24d341740a8842b28060fd28e2f9e, type: 3}
@@ -31,3 +31,15 @@ MonoBehaviour:
     Name: StepSound.mp3
     Preload: 1
     _id: 269259cc-6a2f-45f3-840d-d53240262930
+  - Clip: {fileID: 8300000, guid: 95668d5d6c39cce4c83963e88c264aa1, type: 3}
+    Key: LoseSound
+    FolderPath: Audio\
+    Name: LoseSound.mp3
+    Preload: 1
+    _id: fdd32266-a25c-4a8f-b657-1f0a75fb4234
+  - Clip: {fileID: 8300000, guid: 7e731af7edc72f741ae89bca9b7f11a8, type: 3}
+    Key: InGameMusic
+    FolderPath: Audio\
+    Name: "\u043F\u043E\u044F\u0432\u043B\u0435\u043D\u0438\u0435 \u043E\u0445\u0440\u0430\u043D\u044B2.mp3"
+    Preload: 1
+    _id: 89d1ace2-e336-4880-8715-a3bd6f7af249

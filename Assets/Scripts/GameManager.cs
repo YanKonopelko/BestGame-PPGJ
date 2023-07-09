@@ -18,10 +18,9 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Lose");
         var a = FindObjectOfType<Player>();
-        //StartCoroutine(BackScreen());
 
-        CameraController.instance.Lose();  
-
+        CameraController.instance.Lose();
+        SoundManager.Instance.PlaySound(SoundManager.SoundType.LoseSound);
     }
     public void AddCollectables(Collectable collectable)
     {

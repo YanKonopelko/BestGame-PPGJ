@@ -15,6 +15,7 @@ public class UseCollectableZone : Interactable
                 transform.GetChild(0).gameObject.SetActive(true);
                 this.enabled = (false);
                 patient.ChangeState();
+                SoundManager.Instance.PlaySound(SoundManager.SoundType.RewardSound);
             }
             
         }

@@ -46,7 +46,7 @@ public class CameraController : MonoBehaviour
         //var player = FindObjectOfType<PlayerMovement>();
         player.gameObject.GetComponent<PlayerMovement>().enabled = false;
         player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-
+        player.GetComponent<Player>().StartStone();
         transform.position = player.transform.position;
         transform.position = new Vector3(transform.position.x, transform.position.y, -10);
 

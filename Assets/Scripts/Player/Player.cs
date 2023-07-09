@@ -5,6 +5,12 @@ public class Player : MonoBehaviour
 {
     public Action OnActionPress;
     [SerializeField] private KeyCode interactionKeyCode = KeyCode.E;
+    private Animation anim;
+
+    private void Start()
+    {
+        anim = GetComponent<Animation>(); 
+    }
 
     void Update()
     {
@@ -14,5 +20,8 @@ public class Player : MonoBehaviour
         }
     }
 
-
+    public void StartStone()
+    {
+        anim.Play("HomlinStone");
+    }
 }

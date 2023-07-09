@@ -38,6 +38,8 @@ public class SecurityGuard : MonoBehaviour
 
     void FixedUpdate()
     {
+        rb.velocity = Vector2.zero;
+
         if (isStay)
         {
             rb.velocity = Vector2.zero;
@@ -116,5 +118,11 @@ public class SecurityGuard : MonoBehaviour
             handAnim.Play("RightHandRotate");
         else
             handAnim.Play("LeftHandRotate"); 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.GetComponent<Player>())
+            GameManager.Instance.Lose();
     }
 }

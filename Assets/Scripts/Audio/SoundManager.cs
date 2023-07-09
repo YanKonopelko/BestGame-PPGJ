@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public enum SoundType { CollectSound = 0, StepSound,EagleSound,WinSound,LoseSound };
+    public enum SoundType { CollectSound = 0, StepSound,LoseSound,RewardSound };
 
     private List<AudioSource> source = new List<AudioSource>();
-    private SourceAudio _sourceAudio;
 
-    public int sourceAmount = 3;
+    [SerializeField]private List<AudioClip> clips = new List<AudioClip>();
+    public int sourceAmount;
     
     public  float volume = 0.4f;
     [SerializeField]private float volumeK = 0.7f;
@@ -18,7 +18,7 @@ public class SoundManager : MonoBehaviour
  
     private void Start()
     {
-
+        sourceAmount = clips.Count;
         if (Instance is null)
         {
             Instance = this;
@@ -29,22 +29,20 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
         }
         
-        _sourceAudio = GetComponent<SourceAudio>();
-
         volume = (PlayerPrefs.HasKey("VFX_VOLUME")) ? PlayerPrefs.GetFloat("VFX_VOLUME") : volume;
 
         volume *= volumeK;
-        _sourceAudio.Volume = volume;
+
 
         for (int i = 0; i < sourceAmount; i++)
         {
             source.Add(gameObject.AddComponent<AudioSource>());
+            source[i].clip = clips[i];
         }
         foreach (AudioSource aso in source)
         {
             aso.volume = volume;
         }
-        _sourceAudio.Loop = false;
 
 
     }
@@ -59,13 +57,12 @@ public class SoundManager : MonoBehaviour
             aso.volume = volume;
         }
 
-        _sourceAudio.Volume = volume;
     }
 
     public void PlaySound(SoundType type)
     {
-        _sourceAudio.Play(type.ToString());
-
+        //_sourceAudio.Play(type.ToString());
+        source[(int)type].Play();
     }
 
     private void PlayLocal(AudioClip clip)

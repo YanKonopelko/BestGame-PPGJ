@@ -10,13 +10,14 @@ public class PlayerMovement : MonoBehaviour
     private Transform _transform;
 
     private SpriteRenderer sprite;
-
+    private SpriteRenderer StoneSprite;
     private bool isMove = false;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         _transform = transform; 
         sprite = GetComponent<SpriteRenderer>();
+        StoneSprite = transform.GetChild(0).GetComponent<SpriteRenderer>();
         StartCoroutine(Walk());
 
     }
@@ -55,9 +56,16 @@ public class PlayerMovement : MonoBehaviour
     private void Rotate()
     {
         if (rb.velocity.x < 0)
+        {
             sprite.flipX = false;
+            StoneSprite.flipX = false;
+        }
         else if (rb.velocity.x > 0)
+        {
             sprite.flipX = true;
+            StoneSprite.flipX = true;
+        }
+
     }
 
 
