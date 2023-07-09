@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public enum SoundType { ButtonSound = 0, SliderSound,EagleSound,WinSound,LoseSound };
+    public enum SoundType { CollectSound = 0, SliderSound,EagleSound,WinSound,LoseSound };
 
     private List<AudioSource> source = new List<AudioSource>();
     private SourceAudio _sourceAudio;

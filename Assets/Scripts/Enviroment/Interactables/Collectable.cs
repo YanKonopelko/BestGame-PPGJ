@@ -8,8 +8,9 @@ public class Collectable : Interactable
     {
         Debug.Log(this);
         GameManager.Instance.AddCollectables(this);
+        SoundManager.Instance.PlaySound(SoundManager.SoundType.CollectSound);
         Destroy(gameObject);
-        //Вывод текста с описанием на он триггер
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,7 +20,7 @@ public class Collectable : Interactable
             PressECanvas.SetActive(true);
             player.OnActionPress += Action;
             Description.SetActive(true);
-            //Вывод описания
+
         }
     }
 
