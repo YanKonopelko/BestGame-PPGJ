@@ -12,6 +12,7 @@ public class UseCollectableZone : Interactable
         {
             if(i > 0) {
                 GameManager.Instance.Collectacles[collectable] -= 1;
+                GameManager.Instance.UpgradeEffects();
                 transform.GetChild(0).gameObject.SetActive(true);
                 this.enabled = (false);
                 patient.ChangeState();

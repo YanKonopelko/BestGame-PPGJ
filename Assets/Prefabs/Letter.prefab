@@ -274,9 +274,9 @@ GameObject:
   - component: {fileID: 5314242260817120776}
   - component: {fileID: 4963669119985286601}
   - component: {fileID: 1576734812556742573}
-  - component: {fileID: 5936398776362071937}
+  - component: {fileID: 3398197888179527871}
   m_Layer: 0
-  m_Name: Sock
+  m_Name: Letter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -340,7 +340,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 24d0640cf39ae354fbe2f7c0680a1891, type: 3}
+  m_Sprite: {fileID: -593593587, guid: a3dc5a87dda4c6547b4582aced86e424, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -386,7 +386,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.68
---- !u!114 &5936398776362071937
+--- !u!114 &3398197888179527871
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -395,7 +395,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5948504339973710786}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cca1b39676642547b213caad3cf9f0d, type: 3}
+  m_Script: {fileID: 11500000, guid: 6bdd4ff6835d12e43b6e78a0a3071446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PressECanvas: {fileID: 1112041832056851791}
