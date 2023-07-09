@@ -26,7 +26,7 @@ public class CameraController : MonoBehaviour
     {
         if (isMove)
         {
-            transform.position = Vector3.Lerp( transform.position, player.position,0.01f);
+            transform.position = Vector3.Lerp( transform.position, player.position,0.03f);
             transform.position = new Vector3(transform.position.x, transform.position.y, -10);
         }
     }

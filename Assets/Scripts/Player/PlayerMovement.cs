@@ -33,17 +33,15 @@ public class PlayerMovement : MonoBehaviour
         float moveVertical = Input.GetAxis("Vertical");
         Vector2 movement = new Vector2(moveHorizontal, moveVertical); 
         rb.velocity = movement * movementSpeed * Time.deltaTime;
-        
-
 
     }
 
     private void Rotate()
     {
         if (rb.velocity.x < 0)
-            sprite.flipX = true;
-        else if (rb.velocity.x > 0)
             sprite.flipX = false;
+        else if (rb.velocity.x > 0)
+            sprite.flipX = true;
     }
 
 

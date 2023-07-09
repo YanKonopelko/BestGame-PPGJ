@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class UseCollectableZone : Interactable
@@ -14,7 +12,8 @@ public class UseCollectableZone : Interactable
         {
             if(i > 0) {
                 GameManager.Instance.Collectacles[collectable] -= 1;
-                Debug.Log("Action");
+                transform.GetChild(0).gameObject.SetActive(true);
+                this.enabled = (false);
             }
             
         }
