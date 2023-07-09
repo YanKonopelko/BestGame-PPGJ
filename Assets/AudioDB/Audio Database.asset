@@ -25,9 +25,9 @@ MonoBehaviour:
     Name: CollectSound.mp3
     Preload: 1
     _id: 2db2f0e0-dec3-4478-93ac-d63362493419
-  - Clip: {fileID: 0}
-    Key: 
-    FolderPath: 
-    Name: 
+  - Clip: {fileID: 8300000, guid: e33a9936bab33c944aaa41a2e176d976, type: 3}
+    Key: StepSound
+    FolderPath: Audio\
+    Name: StepSound.mp3
     Preload: 1
     _id: 269259cc-6a2f-45f3-840d-d53240262930

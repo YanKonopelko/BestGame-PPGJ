@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public enum SoundType { CollectSound = 0, SliderSound,EagleSound,WinSound,LoseSound };
+    public enum SoundType { CollectSound = 0, StepSound,EagleSound,WinSound,LoseSound };
 
     private List<AudioSource> source = new List<AudioSource>();
     private SourceAudio _sourceAudio;
@@ -18,7 +18,7 @@ public class SoundManager : MonoBehaviour
  
     private void Start()
     {
-        
+
         if (Instance is null)
         {
             Instance = this;
@@ -44,7 +44,8 @@ public class SoundManager : MonoBehaviour
         {
             aso.volume = volume;
         }
-        
+        _sourceAudio.Loop = false;
+
 
     }
 
@@ -64,7 +65,7 @@ public class SoundManager : MonoBehaviour
     public void PlaySound(SoundType type)
     {
         _sourceAudio.Play(type.ToString());
-        Debug.Log("Sound");
+
     }
 
     private void PlayLocal(AudioClip clip)
