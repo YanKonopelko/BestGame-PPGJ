@@ -18,7 +18,9 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Lose");
         var a = FindObjectOfType<Player>();
-        a.gameObject.transform.position = new Vector3(6.35f, 0, 0);
+
+        CameraController.instance.Lose();  
+
     }
     public void AddCollectables(Collectable collectable)
     {
