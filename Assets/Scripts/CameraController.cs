@@ -1,7 +1,6 @@
-using System;
 using System.Collections;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
+
 
 public class CameraController : MonoBehaviour
 {
@@ -44,12 +43,17 @@ public class CameraController : MonoBehaviour
 
     public void Lose()
     {
+        //var player = FindObjectOfType<PlayerMovement>();
+        player.gameObject.GetComponent<PlayerMovement>().enabled = false;
+        player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+
+        transform.position = player.transform.position;
+        transform.position = new Vector3(transform.position.x, transform.position.y, -10);
+
         anim.Play("CameraZoom");
         speed = 1f;
-        var player = FindObjectOfType<PlayerMovement>();
-        player.enabled = false;
-        player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        StartCoroutine(UnZoom(player));
+
+        StartCoroutine(UnZoom(player.GetComponent<PlayerMovement>()));
     }
 
     IEnumerator UnZoom(PlayerMovement player)

@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Lose");
         var a = FindObjectOfType<Player>();
+        StartCoroutine(BackScreen());
 
         CameraController.instance.Lose();  
 
@@ -36,7 +37,15 @@ public class GameManager : MonoBehaviour
         Debug.Log(Collectacles[collectable]);
 
     }
+    IEnumerator BackScreen()
+    {
+        yield return new WaitForSeconds(0.7F);
+        EndGameCanvas.SetActive(true);
+        yield return new WaitForSeconds(2.2F);
+        EndGameCanvas.SetActive(false);
 
+
+    }
     public void Win()
     {
         EndGameCanvas.SetActive(true);
