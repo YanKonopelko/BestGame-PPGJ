@@ -28,7 +28,7 @@ public class Collectable : Interactable
         if (collision.GetComponent<Player>())
         {
             PressECanvas.SetActive(false);
-            Description.SetActive(true);
+            Description.SetActive(false);
             player.OnActionPress -= Action;
             player = null;
         }

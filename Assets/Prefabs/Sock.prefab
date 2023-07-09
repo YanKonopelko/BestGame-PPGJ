@@ -33,7 +33,7 @@ Transform:
   m_Children:
   - {fileID: 4950258255608098630}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1709250528023361294
 SpriteRenderer:
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PressECanvas: {fileID: 2722210384313939578}
   player: {fileID: 0}
+  Description: {fileID: 0}
 --- !u!58 &9040589512115860461
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -234,6 +235,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5747566501473552022, guid: 82e9302e53cdf5f41b042f99e1116ad9, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862957613081767350, guid: 82e9302e53cdf5f41b042f99e1116ad9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8677940904950213849, guid: 82e9302e53cdf5f41b042f99e1116ad9, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 1c10051538e484e849e45b324b9b334b, type: 2}
+    - target: {fileID: 8677940904950213849, guid: 82e9302e53cdf5f41b042f99e1116ad9, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8677940904950213849, guid: 82e9302e53cdf5f41b042f99e1116ad9, type: 3}
+      propertyPath: m_FontData.m_FontSize
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
