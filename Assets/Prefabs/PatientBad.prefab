@@ -223,3 +223,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curState: 0
   clip: {fileID: 8300000, guid: 8802325b6e714a34b976441794e10499, type: 3}
+  sprites:
+  - {fileID: 21300000, guid: 002a0f45eb4899e4897a1783890b28be, type: 3}
+  - {fileID: 21300000, guid: 823798f6640bf2344af70f096c0b1f20, type: 3}

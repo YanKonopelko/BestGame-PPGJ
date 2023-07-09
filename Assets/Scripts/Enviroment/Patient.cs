@@ -5,7 +5,7 @@ public class Patient : MonoBehaviour
 {
     [SerializeField] private PatientState curState = PatientState.sad;
     [SerializeField] private AudioClip clip;
-    [SerializeField] private SpriteRenderer happySprite;
+    [SerializeField] private Sprite[] sprites;
     enum PatientState
     {
         sad,
@@ -36,8 +36,9 @@ public class Patient : MonoBehaviour
     IEnumerator Rotate()
     {
         yield return new WaitForSeconds(2);
-        GetComponent<SpriteRenderer>().flipX = true;
+        GetComponent<SpriteRenderer>().sprite = sprites[(int)curState];
         GetComponent<BoxCollider2D>().offset = new Vector2(1.3f, -0.005971789f);
+
     }
     IEnumerator Sounds()
     {
