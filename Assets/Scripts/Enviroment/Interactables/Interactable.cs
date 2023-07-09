@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    [SerializeField]private GameObject PressECanvas;
+    public GameObject PressECanvas;
     public Player player;
     private void OnTriggerEnter2D(Collider2D collision)
     {
