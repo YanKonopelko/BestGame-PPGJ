@@ -9,7 +9,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] private Transform player;
     private Animation anim;
 
-    private float speed = 0.03f;
+    private float speed = 0.015f;
     private void Start()
     {
         instance = this;
@@ -61,7 +61,7 @@ public class CameraController : MonoBehaviour
         yield return new WaitForSeconds(1.2f);
         player.transform.position = new Vector3(6.35f, 0, 0);
         player.enabled = true;
-        speed = 0.03f;
+        speed = 0.015f;
 
     }
 }
